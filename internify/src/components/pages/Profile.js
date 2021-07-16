@@ -11,11 +11,12 @@ import PhoneAndroidOutlinedIcon from "@material-ui/icons/PhoneAndroidOutlined";
 import StarIcon from "@material-ui/icons/Star";
 import CheckCircleOutlineIcon from "@material-ui/icons/CheckCircleOutline";
 
-const Profile = () => {
+const Profile = ({ user, setUser }) => {
   const [toggle, setToggle] = useState(false);
   const [profileDesc, setProfileDesc] = useState(
     "Angela is a university recruiter at Synch incorporated. Synch Inc. is a fast-paced security solutions tech startup founded in 2018. With a team of 30, we are looking to expand with young and fresh talent!"
   );
+  console.log(user.uid);
   const [profileLabels, setProfileLabels] = useState(["12 Postings"]);
   const [postingContent, setPostingContent] = useState([
     {
@@ -243,7 +244,7 @@ const Profile = () => {
           </Grid>
         </Grid>
       </Grid>
-      <EditModal toggle={toggle} setToggle={setToggle} />
+      <EditModal toggle={toggle} setToggle={setToggle} user={user} setUser={setUser} />
       <CreateJobButton/>
     </Grid>
   );

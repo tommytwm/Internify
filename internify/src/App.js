@@ -56,7 +56,7 @@ function App() {
       <Switch>
         <Route path="/profile">
           <AuthNavbar />
-          <Profile />
+          <Profile user={user} setUser={setUser}/>
           <Footer />
         </Route>
         <Route path="/create">

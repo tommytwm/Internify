@@ -3,6 +3,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
+    // this is the ID created by firebase.
+    authId: {
+        type: String,
+    },
     name: {
         type: String,
     },

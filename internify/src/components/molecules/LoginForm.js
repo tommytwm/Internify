@@ -35,6 +35,7 @@ const LoginForm = () => {
       .signInWithEmailAndPassword(email, password)
       .then((result) => {
         // signed in
+        // console.log(result.user.uid);
         return result.user;
       })
       .catch((error) => {

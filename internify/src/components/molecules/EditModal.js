@@ -8,6 +8,8 @@ import axios from "axios";
 const EditModal = (props) => {
   let toggle = props.toggle;
   let setToggle = props.setToggle;
+  let user = props.user;
+  let setUser = props.setUser;
   const [profile, setProfile] = useState({
     name: "",
     title: "",
@@ -44,6 +46,7 @@ const EditModal = (props) => {
     e.preventDefault();
 
     const newProfile = {
+      authId: profile.authId,
       name: profile.name,
       title: profile.title,
       handle: profile.handle,
@@ -58,7 +61,7 @@ const EditModal = (props) => {
     }
     //TODO: Make POST request to update user information with `profile`
     // NOTE: must determine how to access user's authID. 
-    axios.post(`http://localhost:5000/users/update/${user.id}`, newProfile)
+    // axios.post(`http://localhost:5000/users/update/${user.id}`, newProfile)
     
     console.log(newProfile);
   }

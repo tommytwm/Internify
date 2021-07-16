@@ -29,6 +29,7 @@ router.get("/:id", function (req, res, next) {
 router.post("/", function (req, res, next) {
   // flesh out a new user
   var newUser = new UserData({
+    authId: req.body.authId,
     name: req.body.name,
     email: req.body.email,
     profilePicture: req.body.profilePicture,
@@ -69,7 +70,7 @@ router.delete("/:id", function (req, res, next) {
 //@route    UPDATE api/update/:id
 //@desc     UPDATE a User document
 //@access   Public (?)
-
+// change this so that the user is searched by the uId, which is a field.
 router.post("/update/:id", function (req, res, next) {
   UserData.findById(req.params.id)
     .then((user) => {

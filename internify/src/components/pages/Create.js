@@ -89,6 +89,7 @@ function Create(props) {
 
     setCurrentStep(currentStep + 1);
     console.log(jobData);
+    props.actions.addJobsData(jobData);
     // Redirects view to top
     window.scrollTo(0, 0);
   }
