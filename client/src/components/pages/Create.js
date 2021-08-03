@@ -297,7 +297,7 @@ function Create(props) {
     } else {
       setError(true);
     }
-  };
+  }
 
   return (
     <div className={classes.root}>
@@ -315,7 +315,10 @@ function Create(props) {
           >
             {currentStep > 1 ? (
               <ButtonClear
-                onClick={() => setCurrentStep(currentStep - 1)}
+                onClick={() => {
+                  setCurrentStep(currentStep - 1);
+                  console.log(jobData);
+                }}
                 startIcon={<ChevronLeft />}
               >
                 Back
