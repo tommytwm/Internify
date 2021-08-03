@@ -105,19 +105,35 @@ const TechStack = (props) => {
    * Stage 3: Add a registered key
    */
   function handleLanguagesInput(value) {
-    console.log(value);
+    const valid = true;
+    if (valid) {
+      jobData.languages.push(value);
+      console.log(jobData.languages);
+    }
   }
 
   function handleFrameworksInput(value) {
-    console.log(value);
+    const valid = true;
+    if (valid) {
+      jobData.frameworks.push(value);
+      console.log(jobData.frameworks);
+    }
   }
 
   function handleToolsInput(value) {
-    console.log(value);
+    const valid = true;
+    if (valid) {
+      jobData.tools.push(value);
+      console.log(jobData.tools);
+    }
   }
 
   function handleConceptsInput(value) {
-    console.log(value);
+    const valid = true;
+    if (valid) {
+      jobData.concepts.push(value);
+      console.log(jobData.concepts);
+    }
   }
 
   return (
